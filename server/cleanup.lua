@@ -2,7 +2,7 @@ local stopCleanup = false;
 
 RegisterCommand('cancelcleanup',function(source)
   local user_id = vRP.getUserId{source}
-  if vRP.isUserisUserMod{user_id} then 
+  if vRP.isUserMod{user_id} then 
     stopCleanup = true 
     TriggerClientEvent('chatMessage',-1,'^3Tunner^0 Admin-ul ^3'..GetPlayerName(source) .. '^0 a oprit stergerea masinilor!')
   end
